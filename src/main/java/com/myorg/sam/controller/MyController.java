@@ -17,11 +17,10 @@ import java.util.Set;
 
 @Api(value = "Course information", description = "Api related to course information")
 @Controller
-@RequestMapping("/sam")
 public class MyController {
 
     @ApiOperation(value = "view all courses")
-    @RequestMapping(value = "/view", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public ResponseEntity<MyEntity> get() {
         MyEntity m = new MyEntity();
         m.setAge(10);
