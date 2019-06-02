@@ -12,7 +12,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-public class ApplicationRunner extends SpringBootServletInitializer {
+public class ApplicationRunner  {
     public static void main(String[] args) {
         SpringApplication.run(ApplicationRunner.class, args);
     }
@@ -20,10 +20,5 @@ public class ApplicationRunner extends SpringBootServletInitializer {
     public Docket courseApi() {
         return new Docket(DocumentationType.SWAGGER_2).select()
                 .apis(RequestHandlerSelectors.basePackage("com.myorg.sam.controller")).build();
-    }
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(ApplicationRunner.class);
     }
 }
